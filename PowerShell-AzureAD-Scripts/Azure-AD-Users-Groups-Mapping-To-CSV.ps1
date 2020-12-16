@@ -2,6 +2,7 @@ $Subscription= '<SubscriptionID Here>'
 $context = Get-AzSubscription -SubscriptionId $Subscription
 Set-AzContext $context
 
+Connect-AzureAD
 $list = Get-AzureADGroup -SearchString "<Filter>" 
 $Output = foreach ($item in $list)
  {
